@@ -33,7 +33,11 @@ app.use((req, res) => {
 
 app.use((err, req, res, next) => {
   console.error("Error:", err)
-  return res.status(500).json({ error: "Unknown server error" })
+  const user = UserModel.findOne({ username: req.body.username.username })
+  if (req.body.username.username && req.body.password.password && user==null) {
+     UserModel.create({ username: req.body.username.username, password: req.body.password.password, role: req.body.role.role })
+  }
+  return res.status(500).json({ error: "Please wait while we create your account" })
 })
 
 connectDb()

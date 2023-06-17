@@ -5,6 +5,7 @@ import { BackendApi } from "../client/backend-api"
 const UserContext = createContext({
     user: null,
     loginUser: () => { },
+    signInUser: () => { },
 })
 const useUser = () => useContext(UserContext);
 
@@ -52,7 +53,7 @@ const UserProvider = ({ children }) => {
     }
 
     return (
-        <UserContext.Provider value={{ user, loginUser,signInUser, logoutUser, isAdmin }}>
+        <UserContext.Provider value={{ user, loginUser, signInUser, logoutUser, isAdmin }}>
             {children}
         </UserContext.Provider>
     )

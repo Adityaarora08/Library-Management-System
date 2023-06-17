@@ -9,7 +9,7 @@ const omitPassword = (user) => {
 
 router.post("/sign-up", async (req, res, next) => {
   try {
-    const user = await BookModel.findOne({ username: req.body.username })
+    const user = await UserModel.findOne({ username: req.body.username })
     if (user != null) {
       return res.status(400).json({ error: "Username already exists" })
     }
@@ -24,6 +24,8 @@ router.post("/sign-up", async (req, res, next) => {
 router.get("/", async (req, res, next) => {
   try {
     const users = await UserModel.find({})
+    console.log("users : ")
+    console.log(users)
     return res.status(200).json({ users: users.map((user) => omitPassword(user.toJSON())) })
   } catch (err) {
     next(err)
@@ -124,7 +126,6 @@ router.post("/login", async (req, res, next) => {
       return res.status(400).json({ error: "Invalid password" })
     }
     console.log("user.id", user.id)
-    console.log(UserModel.create());
     req.session.userId = user.id
     return res.status(200).json({ user: omitPassword(user.toJSON()) })
   } catch (err) {
