@@ -1,7 +1,7 @@
 # Library-Management-System
 
-Steps to run the project locally: <br/>
-STEP 1:
+<b>Steps to run the project locally:</b> <br/>
+STEP 1:  <br/>
 Open frontend and backend folders in different terminals
 STEP 2:
 npm install all the packages in both the directories
