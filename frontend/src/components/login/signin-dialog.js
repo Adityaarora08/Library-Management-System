@@ -72,7 +72,7 @@ export const SigninDialog = ({ open, handleClose, handleSubmit }) => {
                 <TextField
                     margin="dense"
                     id="role"
-                    label="user/admin"
+                    label="guest/admin"
                     type="text"
                     fullWidth
                     variant="standard"
