@@ -1,6 +1,6 @@
 # Library-Management-System
 
-Steps to run the project locally: 
+Steps to run the project locally: <br/>
 STEP 1:
 Open frontend and backend folders in different terminals
 STEP 2:
