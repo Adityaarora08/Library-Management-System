@@ -1,0 +1,117 @@
+.mb2 {
+    margin-bottom: 1em !important;
+}
+
+.pageHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0 1em;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.pageHeader h1 {
+    font-size: 4em;
+    font-weight: 400;
+    color: #444;
+    margin: 0;
+}
+
+.tableContainer {
+    width: 100%;
+    height: 400px;
+}
+
+.actionsContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.conf_modal {
+    max-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: (-50%, -50%);
+}
+
+.conf_modal_actions {
+    padding: 15px 20px;
+    justify-content: flex-end;
+    border-top: 1px solid #e4e4e4;
+}
+.searchcontainer {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown {
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid gray; */
+    top:30px;
+    z-index: 99999;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+    background-color: rgb(65, 64, 64);
+  }
+  
+  .dropdown:empty {
+    border: none;
+  }
+  
+  .dropdownrow {
+    padding: 2px;
+    cursor: pointer;
+    text-align: start;
+    margin: 2px 0;
+    font-weight: 500;
+    width: 220px;
+    color: white;
+    background-color: rgb(65, 64, 64);
+    margin: 0;
+    border-radius: 5px;
+  }
+  .dropdownrow:hover {
+    background-color: grey;
+  }
+  input {
+    display: inline;
+    width: 220px;
+    padding: 5px;
+    height: 15px;
+    border: 0;
+    background-color: transparent;
+    
+  }
+  input:focus{
+      outline :none;
+  }
+  .searchinner {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+    /* border: 1px solid black; */
+  }
+  .searchbtn{
+    color: white;
+    background-color: #1976d2;
+    padding: 5px;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+  }
+  .micIcon{
+    display: inline;
+  }
+  .dialogBorrowed{
+    position: absolute;
+  }
+  .btnMic{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }

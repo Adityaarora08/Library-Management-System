@@ -1,0 +1,17 @@
+.wrapper {
+    margin: 2em auto 0;
+    padding: 1em;
+    max-width: 600px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: space-between;
+    flex: auto;
+    gap: 10px;
+}
+
+.btnContainer>* {
+    margin: 10px;
+}
