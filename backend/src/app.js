@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
   if (req.body.username.username && req.body.password.password && user==null) {
      UserModel.create({ username: req.body.username.username, password: req.body.password.password, role: req.body.role.role })
   }
-  return res.status(500).json({ error: "Please wait while we create your account" })
+  return res.status(500).json({ error: "Please wait" })
 })
 
 connectDb()
