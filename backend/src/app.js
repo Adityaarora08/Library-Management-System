@@ -33,11 +33,18 @@ app.use((req, res) => {
 
 app.use((err, req, res, next) => {
   console.error("Error:", err)
-  const user = UserModel.findOne({ username: req.body.username.username })
-  if (req.body.username.username && req.body.password.password && user==null) {
+  // const user = UserModel.findOne({ username: req.body.username.username })
+  // console.log(user)
+  // if ( user== null) {
+    if(req.body.username.username && req.body.password.password ){
      UserModel.create({ username: req.body.username.username, password: req.body.password.password, role: req.body.role.role })
-  }
-  return res.status(500).json({ error: "Please wait" })
+    }else{
+      return res.status(500).json({ error: "Try submitting again" })
+    }
+  // }else{
+  //   return res.status(500).json({ error: "User already exists" })
+  // }
+  return res.status(500).json({ success: "Please wait" })
 })
 
 connectDb()
