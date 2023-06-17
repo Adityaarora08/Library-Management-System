@@ -11,5 +11,7 @@ frontend - localhost:3000 <br/>
 backend - localhost:8080  <br/>
 STEP 4:  <br/>
 <b>Login using the following credentials: </b> <br/>
-For normal User- username="user", password= "user"  <br/>
+For normal User- username="guest", password= "guest"  <br/>
 For Admin - username="admin", password= "admin"   <br/>
+<b>OR</b> <br/>
+<b> Sign Up as new user </b>
